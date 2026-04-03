@@ -1,0 +1,13 @@
+train: D:\PycharmProjects\ultralytics-main\dataset\UTDAC2020.v1i.yolov8\train\images
+val: D:\PycharmProjects\ultralytics-main\dataset\UTDAC2020.v1i.yolov8\valid\images
+test: D:\PycharmProjects\ultralytics-main\dataset\UTDAC2020.v1i.yolov8\test\images
+
+nc: 4
+names: ['echinus', 'holothurian', 'scallop', 'starfish']
+
+roboflow:
+  workspace: yi-zhao
+  project: utdac2020-iqq77
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yi-zhao/utdac2020-iqq77/dataset/1

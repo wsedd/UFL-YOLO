@@ -1,0 +1,18 @@
+# YOLOv10-n (UFL) configuration notes.
+# Adapt this pseudo-yaml to your YOLOv10 repo builder.
+nc: 4  # change to your dataset classes
+
+backbone:
+  # standard stages...
+  - [conv, 32, 3, 2]
+  - [conv, 64, 3, 2]
+  - [stage, 64, 2]
+  - [stage, 128, 2]
+  - [-1, 1, UAAM, [64]]  # insert UAAM after shallow stage
+  - [stage, 256, 3]
+
+neck:
+  # incorporate SOEP by collecting P2 and P3, then replacing P3 outputs with SOEP(p2,p3)
+  - [SOEP, [p2_ch, p3_ch]]
+head:
+  - [detect, [nc]]
