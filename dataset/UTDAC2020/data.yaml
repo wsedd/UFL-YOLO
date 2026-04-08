@@ -1,6 +1,6 @@
-train: D:\PycharmProjects\ultralytics-main\dataset\UTDAC2020.v1i.yolov8\train\images
-val: D:\PycharmProjects\ultralytics-main\dataset\UTDAC2020.v1i.yolov8\valid\images
-test: D:\PycharmProjects\ultralytics-main\dataset\UTDAC2020.v1i.yolov8\test\images
+train: D:\PycharmProjects\UFL-YOLO\dataset\UTDAC2020\train\images
+val: D:\PycharmProjects\UFL-YOLO\dataset\UTDAC2020\valid\images
+test: D:\PycharmProjects\UFL-YOLO\dataset\UTDAC2020\test\images
 
 nc: 4
 names: ['echinus', 'holothurian', 'scallop', 'starfish']
