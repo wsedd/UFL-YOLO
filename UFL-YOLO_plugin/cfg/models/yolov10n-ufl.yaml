@@ -1,5 +1,4 @@
 # YOLOv10-n (UFL) configuration notes.
-# Adapt this pseudo-yaml to your YOLOv10 repo builder.
 nc: 4  # change to your dataset classes
 
 backbone:
@@ -13,11 +12,10 @@ backbone:
   - [-1, 1, SCDown, [512, 3, 2]] # 5-P4/16
   - [-1, 6, C2f, [512, True]]
   - [-1, 1, SCDown, [1024, 3, 2]] # 7-P5/32
-  - [-1, 3, C2f, [1024, True]]
+  - [-1, 3, C2fCIB, [1024, True]]
   - [-1, 1, SPPF, [1024, 5]] # 9
   - [-1, 1, PSA, [1024]] # 10
 
-# YOLOv8.0n head
 head:
   # incorporate SOEP by collecting P2 and P3, then replacing P3 outputs with SOEP(p2,p3)
   - [SOEP, [p2_ch, p3_ch]]
