@@ -4,7 +4,7 @@ warnings.filterwarnings('ignore')
 from ultralytics import YOLO
 
 if __name__ == '__main__':
-    model = YOLO('')
+    model = YOLO('UFL-YOLO_plugin/cfg/models/yolov10n-ufl.yaml')
     model.load('yolov10n.pt')  # loading pretrain weights
     model.train(
         data='dataset/URPC2020/data.yaml',
@@ -21,5 +21,5 @@ if __name__ == '__main__':
         # amp=False, # close amp
         # fraction=0.2,
         project='runs/train',
-        name='v10n',
+        name='UFL-YOLO',
     )
